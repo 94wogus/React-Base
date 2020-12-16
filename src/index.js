@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Switch, Route} from 'react-router-dom';
 import { createBrowserHistory } from 'history';
@@ -6,7 +6,7 @@ import { Provider } from "react-redux";
 
 import * as serviceWorker from './serviceWorker';
 
-import {routes} from '@/route';
+import route from '@/route';
 import store from '@/store';
 
 import '@assets/style/common.css';
@@ -17,7 +17,7 @@ const App = () => {
     return (
         <Router history={history}>
             <Switch>
-            {routes.map((r) => (
+            {route.map((r) => (
                 <Route key={r.path} path={r.path} component={r.component} exact/>
             ))}
             </Switch>
