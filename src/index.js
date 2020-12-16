@@ -1,17 +1,38 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { Router, Switch, Route} from 'react-router-dom';
+import { createBrowserHistory } from 'history';
+import { Provider } from "react-redux";
+
+import * as serviceWorker from './serviceWorker';
+
+import {routes} from '@/route';
+import store from '@/store';
+
+import '@assets/style/common.css';
+import '@assets/style/desktop.scss';
+
+const App = () => {
+    const history = createBrowserHistory();
+    return (
+        <Router history={history}>
+            <Switch>
+            {routes.map((r) => (
+                <Route key={r.path} path={r.path} component={r.component} exact/>
+            ))}
+            </Switch>
+        </Router>
+    )
+}
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+    <Provider store={store}>
+        <App />
+    </Provider>,
+    document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister();
