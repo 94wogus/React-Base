@@ -1,4 +1,5 @@
 import logo from '@assets/image/logo.svg';
+import {withRouter} from "react-router-dom"
 
 function Main() {
   return (
@@ -21,4 +22,4 @@ function Main() {
   );
 }
 
-export default Main;
+export default withRouter(Main);

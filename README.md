@@ -1,3 +1,36 @@
+# Qunatit React Test
+주어진 프로젝트에서 아래 사항을 구현해 주세요
+
+## 주요 목표
+TodoList를 작성하세요
+1) TodoList UI 구성(sass)
+2) TodoList 기능 구현 (List 목록, 조회, 생성, 수정, 삭제)
+3) redux를 활용하여 TodList Data 관리(리로딩 시 데이터 저장 필요 X)
+
+## 추가 목표
+TodoList-item Page 작성
+1) TodoList Item 조회 및 수정 페이지 작성(router)
+2) TodoList Item의 description 수정 기능 구현
+
+## Yarn 설치 방법(예시)
+```
+npm install --global yarn
+```
+다른 방법으로 설치하셔도 무방합니다.
+
+## Installed Module
+redux, router, sass 등등
+위의 목표를 위한 module은 설치 되어 있습니다.  
+추가 module 설치 가능합니다.
+<br/>
+<br/>
+<br/>
+<br/>
+
+---
+
+<br/>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

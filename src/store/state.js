@@ -1,3 +1,5 @@
-export default {
+const state = {
     todoList: []
 }
+
+export default state

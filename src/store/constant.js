@@ -1,2 +1,5 @@
-export default {
-};
+const Constant = {
+
+}
+
+export default Constant
